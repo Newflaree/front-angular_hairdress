@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { PagesComponent } from './pages.component';
+import { ProductsComponent } from './products/products.component';
 
 const routes: Routes = [
   {
@@ -9,6 +10,7 @@ const routes: Routes = [
     component: PagesComponent,
     children: [
       // TODO: Config children
+      { path: 'products', component: ProductsComponent }
     ]
   }
 ]
