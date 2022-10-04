@@ -1,1 +1,7 @@
-<p>products works!</p>
+<div class="row row-cols-1 row-cols-md-3 g-4 mt-5">
+  <!-- Product Card -->
+  <div class="col" *ngFor="let item of productsTest">
+    <app-product-card [cardTitle]='item.name'></app-product-card>
+  </div>
+  <!-- Product Card -->
+</div>
