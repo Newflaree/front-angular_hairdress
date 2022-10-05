@@ -7,7 +7,6 @@ import { NotPageFoundComponent } from './not-page-found/not-page-found.component
 import { AuthRoutingModule } from './auth/auth-routing.module';
 import { PagesRoutingModule } from './pages/pages-routing.module';
 
-
 const routes: Routes = [
   {
     path: '',

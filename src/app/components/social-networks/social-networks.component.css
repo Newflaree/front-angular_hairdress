@@ -1,0 +1,25 @@
+.contact__social {
+	padding-top: 20px;
+	margin-bottom: 40px;
+}
+
+.contact__social a {
+	display: inline-block;
+	text-align: center;
+	width: 40px;
+	height: 40px;
+	padding-top: 8px;
+	margin-right: 6px;
+	color: #222222;
+	border-radius: 50%;
+	background: #E8E8E8;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+
+.contact__social a:hover {
+	background: #E0698D;
+	color: #ffffff;
+}
+

@@ -1,0 +1,118 @@
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <!-- Accordion Item -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        {{ accordionItems[0].title | uppercase }}
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body" *ngFor="let subMenuItem1 of accordionItems[0].options">
+
+        <!-- Check Item -->
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label d-flex justify-content-between" for="flexCheckDefault">
+            <div>
+              {{ subMenuItem1.name }}
+              <p>{{ subMenuItem1.time }}</p>
+            </div>
+            <div>
+              $ {{ subMenuItem1.price }}
+            </div>
+          </label>
+        </div>
+        <!-- Check Item -->
+
+      </div>
+    </div>
+  </div>
+  <!-- Accordion Item -->
+  <!-- Accordion Item -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        {{ accordionItems[1].title | uppercase }}
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body" *ngFor="let subMenuItem2 of accordionItems[1].options">
+
+        <!-- Check Item -->
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label d-flex justify-content-between" for="flexCheckDefault">
+            <div>
+              {{ subMenuItem2.name }}
+              <p>{{ subMenuItem2.time }}</p>
+            </div>
+            <div>
+              {{ subMenuItem2.price }}
+            </div>
+          </label>
+        </div>
+        <!-- Check Item -->
+
+      </div>
+    </div>
+  </div>
+  <!-- Accordion Item -->
+  <!-- Accordion Item -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        {{ accordionItems[2].title | uppercase }}
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body" *ngFor="let subMenuItem3 of accordionItems[2].options">
+
+        <!-- Check Item -->
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label d-flex justify-content-between" for="flexCheckDefault">
+            <div>
+              {{ subMenuItem3.name }}
+              <p>{{ subMenuItem3.time }}</p>
+            </div>
+            <div>
+              {{ subMenuItem3.price }}
+            </div>
+          </label>
+        </div>
+        <!-- Check Item -->
+
+      </div>
+    </div>
+  </div>
+  <!-- Accordion Item -->
+  <!-- Accordion Item -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingFour">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+        {{ accordionItems[3].title | uppercase }}
+      </button>
+    </h2>
+    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body" *ngFor="let subMenuItem4 of accordionItems[3].options">
+
+        <!-- Check Item -->
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label d-flex justify-content-between" for="flexCheckDefault">
+            <div>
+              {{ subMenuItem4.name }}
+              <p>{{ subMenuItem4.time }}</p>
+            </div>
+            <div>
+              {{ subMenuItem4.price }}
+            </div>
+          </label>
+        </div>
+        <!-- Check Item -->
+
+      </div>
+    </div>
+  </div>
+  <!-- Accordion Item -->
+</div>

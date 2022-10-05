@@ -1,7 +1,17 @@
-<div class="row row-cols-1 row-cols-md-3 g-4 mt-5">
-  <!-- Product Card -->
-  <div class="col" *ngFor="let item of productsTest">
-    <app-product-card [cardTitle]='item.name'></app-product-card>
+<section class="py-5 p-3">
+  <div class="row">
+    <h1 class="mb-4">
+      Productos
+    </h1>
   </div>
-  <!-- Product Card -->
-</div>
+
+  <hr />
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <!-- Product Card -->
+    <div class="col" *ngFor="let item of productsTest">
+      <app-product-card [cardTitle]='item.name'></app-product-card>
+    </div>
+    <!-- Product Card -->
+  </div>
+</section>

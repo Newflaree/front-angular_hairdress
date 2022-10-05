@@ -1,18 +1,30 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+// Components
+import { AccordionComponent } from './accordion/accordion.component';
 import { ProductCardComponent } from './product-card/product-card.component';
-
-
+import { MapComponent } from './map/map.component';
+import { SlideShowComponent } from './slide-show/slide-show.component';
+import { SocialNetworksComponent } from './social-networks/social-networks.component';
 
 @NgModule({
   declarations: [
-    ProductCardComponent
+    AccordionComponent,
+    MapComponent,
+    ProductCardComponent,
+    SlideShowComponent,
+    SocialNetworksComponent
   ],
   exports: [
-    ProductCardComponent
+    AccordionComponent,
+    MapComponent,
+    ProductCardComponent,
+    SlideShowComponent,
+    SocialNetworksComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ]
 })
+
 export class ComponentsModule { }

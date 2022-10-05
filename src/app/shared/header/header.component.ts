@@ -25,6 +25,10 @@ export class HeaderComponent implements OnInit {
     }
   ]
 
+  public logedMenu = [
+    //TODO: Configure sesion state
+  ]
+
 
   constructor() { }
 
