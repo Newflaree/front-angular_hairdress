@@ -24,3 +24,11 @@
 	color: #ffffff;
 }
 
+.contact__text p {
+	font-size: 18px;
+	color: #222222;
+}
+
+.contact__text p span {
+	font-size: 18px;
+}
