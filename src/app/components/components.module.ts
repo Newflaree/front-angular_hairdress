@@ -6,6 +6,7 @@ import { ProductCardComponent } from './product-card/product-card.component';
 import { MapComponent } from './map/map.component';
 import { SlideShowComponent } from './slide-show/slide-show.component';
 import { SocialNetworksComponent } from './social-networks/social-networks.component';
+import { TitleComponent } from './title/title.component';
 
 @NgModule({
   declarations: [
@@ -13,14 +14,16 @@ import { SocialNetworksComponent } from './social-networks/social-networks.compo
     MapComponent,
     ProductCardComponent,
     SlideShowComponent,
-    SocialNetworksComponent
+    SocialNetworksComponent,
+    TitleComponent
   ],
   exports: [
     AccordionComponent,
     MapComponent,
     ProductCardComponent,
     SlideShowComponent,
-    SocialNetworksComponent
+    SocialNetworksComponent,
+    TitleComponent
   ],
   imports: [
     CommonModule,

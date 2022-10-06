@@ -14,10 +14,34 @@ const routes: Routes = [
     component: PagesComponent,
     children: [
       // TODO: Config Lazyload
-      { path: '', component: HomeComponent },
-      { path: 'products', component: ProductsComponent },
-      { path: 'services', component: ServicesComponent },
-      { path: 'contact', component: ContactComponent }
+      {
+        path: '',
+        component: HomeComponent,
+        data: {
+          title: 'Inicio'
+        }
+      },
+      {
+        path: 'products',
+        component: ProductsComponent,
+        data: {
+          title: 'Productos'
+        }
+      },
+      {
+        path: 'services',
+        component: ServicesComponent,
+        data: {
+          title: 'Nuestros Servicios'
+        }
+      },
+      {
+        path: 'contact',
+        component: ContactComponent,
+        data: {
+          title: 'Contacto'
+        }
+      }
     ]
   }
 ];

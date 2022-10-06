@@ -1,32 +1,39 @@
+:root {
+  --main-color: #E0698D;
+  --main-color-darker: #A85B6D;
+  --main-dark: #0D3A5C;
+  --main-light: #DAEAF5;
+}
+
 .custom-text-pink {
-  color: #E0698D;
+  color: var( --main-color );
 }
 
 .custom-bg-pink {
-  background: #E0698D;
+  background: var( --main-color );
 }
 
 .custom-btn-pink {
-  background-color: #E0698D;
-  border-color: #E0698D;
+  background-color: var( --main-color );
+  border-color: var( --main-color );
   color: white;
 }
 
 .custom-btn-pink:hover {
-  background-color: #A85B6D;
-  border-color: #A85B6D;
+  background-color: var( --main-color-darker );
+  border-color: var( --main-color-darker );
   color: white;
 }
 
 .custom-btn-outline-pink {
   background-color: transparent;
-  border-color: #E0698D;
-  color: #E0698D;
+  border-color: var( --main-color );
+  color: var( --main-color );
 }
 
 .custom-btn-outline-pink:hover {
-  background-color: #E0698D;
-  border-color: #E0698D;
+  background-color: var( --main-color );
+  border-color: var( --main-color );
   color: white;
 }
 
