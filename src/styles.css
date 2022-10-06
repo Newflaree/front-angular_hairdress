@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+.custom-text-pink {
+  color: #E0698D;
+}
+
+.custom-bg-pink {
+  background: #E0698D;
+}
+
+.custom-btn-pink {
+  background-color: #E0698D;
+  border-color: #E0698D;
+  color: white;
+}
+
+.custom-btn-pink:hover {
+  background-color: #A85B6D;
+  border-color: #A85B6D;
+  color: white;
+}
+
+.custom-btn-outline-pink {
+  background-color: transparent;
+  border-color: #E0698D;
+  color: #E0698D;
+}
+
+.custom-btn-outline-pink:hover {
+  background-color: #E0698D;
+  border-color: #E0698D;
+  color: white;
+}
+
+
