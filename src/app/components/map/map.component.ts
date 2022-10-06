@@ -1,31 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import * as Mapboxgl from 'mapbox-gl';
-import { environment } from 'src/environments/environment';
+import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { Map } from 'mapbox-gl';
 
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.css']
 })
-export class MapComponent implements OnInit {
-  public customMap: Mapboxgl.Map;
+export class MapComponent implements AfterViewInit {
+  @ViewChild( 'mapDiv' ) mapDivElement!: ElementRef;
 
   constructor() { 
-    (Mapboxgl as any).accessToken = environment.mapboxKey;
+  }
 
-    this.customMap = new Mapboxgl.Map({
-      container: 'mapbox-map', // container ID
+  ngAfterViewInit(): void {
+    const map = new Map({
+      container: this.mapDivElement.nativeElement, // container ID
       style: 'mapbox://styles/mapbox/streets-v11', // style URL
-      center: [-70.4008463,-23.6518416], // starting position [lng, lat]
-      zoom: 9, // starting zoom
+      center: [-70.4087393, -23.6710097], // starting position [lng, lat]
+      zoom: 14, // starting zoom
     });
 
-    this.customMap.on('style.load', () => {
-      this.customMap.setFog({}); // Set the default atmosphere style
-    });
   }
-
-  ngOnInit(): void {
-  }
-
 }
