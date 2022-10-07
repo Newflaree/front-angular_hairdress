@@ -25,6 +25,13 @@
   color: white;
 }
 
+.custom-btn-pink:disabled,
+.custom-btn-pink[disabled]{
+  border-color: #DB8C9F;
+  background-color: #DB8C9F;
+  color: white;
+}
+
 .custom-btn-outline-pink {
   background-color: transparent;
   border-color: var( --main-color );
