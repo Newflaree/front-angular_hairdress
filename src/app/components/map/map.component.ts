@@ -19,6 +19,5 @@ export class MapComponent implements AfterViewInit {
       center: [-70.4087393, -23.6710097], // starting position [lng, lat]
       zoom: 14, // starting zoom
     });
-
   }
 }
