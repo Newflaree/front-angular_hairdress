@@ -1,0 +1,21 @@
+      <div class="card border-dark mb-3">
+        <div class="card-header">Hair By Eve</div>
+        <div class="card-body text-dark">
+          <h5 class="card-title">Detalle de los servicios</h5>
+          <hr />
+
+          <p *ngIf="servicesCheck.length === 0" class="card-text text-center my-5">No hay servicios selecionados</p>
+          <p *ngIf="servicesCheck.length > 0" class="card-text text-center my-5">Hay servicios selecionados</p>
+
+          <hr />
+          <div class="d-flex justify-content-between">
+            <div>Total</div>
+            <div>$ 0</div>
+          </div>
+        </div>
+
+        <button *ngIf="!forPay" routerLink="/reservation" class="m-3 btn custom-btn-pink">Reservar Hora</button>
+        <button *ngIf="forPay" routerLink="/reservation" class="m-3 btn custom-btn-pink">Ir a pagar</button>
+
+      </div>
+

@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
 // Pages
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { PagesComponent } from './pages.component';
 import { ProductsComponent } from './products/products.component';
+import { ReservationComponent } from './reservation/reservation.component';
 import { ServicesComponent } from './services/services.component';
 
 const routes: Routes = [
@@ -13,7 +13,7 @@ const routes: Routes = [
     path: '',
     component: PagesComponent,
     children: [
-      // TODO: Config Lazyload
+      // TODO: Config Lazyloading
       {
         path: '',
         component: HomeComponent,
@@ -33,6 +33,13 @@ const routes: Routes = [
         component: ServicesComponent,
         data: {
           title: 'Nuestros Servicios'
+        }
+      },
+      {
+        path: 'reservation',
+        component: ReservationComponent,
+        data: {
+          title: 'Reserva tu hora'
         }
       },
       {

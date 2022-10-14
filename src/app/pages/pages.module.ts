@@ -11,6 +11,7 @@ import { ServicesComponent } from './services/services.component';
 // Modules
 import { ComponentsModule} from '../components/components.module';
 import { SharedModule } from '../shared/shared.module';
+import { ReservationComponent } from './reservation/reservation.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { SharedModule } from '../shared/shared.module';
     PagesComponent,
     ProductsComponent,
     ServicesComponent,
+    ReservationComponent,
   ],
   imports: [
     CommonModule,
