@@ -1,5 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
-import { SwiperComponent } from 'swiper/angular';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import SwiperCore, { Autoplay, Navigation, Pagination, EffectFade } from "swiper";
  
 SwiperCore.use([ Autoplay, EffectFade, Navigation, Pagination ]);

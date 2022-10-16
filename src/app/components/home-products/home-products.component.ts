@@ -16,6 +16,9 @@ export class HomeProductsComponent implements OnInit {
     { name: 'test 4' },
     { name: 'test 5' },
     { name: 'test 6' },
+    { name: 'test 7' },
+    { name: 'test 8' },
+    { name: 'test 9' },
   ]
 
   constructor() { }
