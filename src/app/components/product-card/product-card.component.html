@@ -1,4 +1,4 @@
-<div class="card m-3">
+<div class="card">
   <img src="assets/images/product.jpg" class="card-img-top" alt="product">
   <div class="card-body">
     <h5 class="card-title">{{ cardTitle }}</h5>
@@ -9,9 +9,19 @@
   </ul>
   <div class="card-body">
     <p href="#" class="text-end fw-bold">$ 4.000</p>
-    <button type="button" class="btn custom-btn-pink">
-      <i class="fas fa-shopping-cart"></i>
-      Agregar al carro
-    </button>
+    
+    <div class="d-flex justify-content-between">
+      <button type="button" class="btn custom-btn-pink">
+        <i class="fas fa-shopping-cart"></i>
+        Agregar al carro
+      </button>
+
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn custom-btn-pink">-</button>
+        <button type="button" class="btn custom-btn-outline-pink" disabled>0</button>
+        <button type="button" class="btn custom-btn-pink">+</button>
+      </div>
+
+    </div>
   </div>
 </div>
