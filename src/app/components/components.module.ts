@@ -14,6 +14,7 @@ import { ServicesTotalComponent } from './services-total/services-total.componen
 import { SlideShowComponent } from './slide-show/slide-show.component';
 import { SocialNetworksComponent } from './social-networks/social-networks.component';
 import { TitleComponent } from './title/title.component';
+import { HoursPickerComponent } from './hours-picker/hours-picker.component';
 
 @NgModule({
   declarations: [
@@ -21,18 +22,20 @@ import { TitleComponent } from './title/title.component';
     HomeAboutComponent,
     HomeGalleryComponent,
     HomeProductsComponent,
+    HoursPickerComponent,
     MapComponent,
     ProductCardComponent,
     ServicesTotalComponent,
     SlideShowComponent,
     SocialNetworksComponent,
-    TitleComponent
+    TitleComponent,
   ],
   exports: [
     AccordionComponent,
     HomeAboutComponent,
     HomeGalleryComponent,
     HomeProductsComponent,
+    HoursPickerComponent,
     MapComponent,
     ProductCardComponent,
     ServicesTotalComponent,

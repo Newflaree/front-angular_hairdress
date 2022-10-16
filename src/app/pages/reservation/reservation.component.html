@@ -7,11 +7,42 @@
 
   <div class="row row-cols-1 row-cols-md-2 g-4">
     <div class="col">
-      <app-accordion></app-accordion>
+      <app-hours-picker></app-hours-picker>
     </div>
 
     <div class="col">
-      <app-services-total></app-services-total>
+      <div class="card border-dark mb-3">
+        <div class="card-header">Hair By Eve</div>
+        <div class="card-body text-dark">
+          <h5 class="card-title">Detalle de los servicios</h5>
+          <hr />
+
+          <!-- TODO: Condition this list -->
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Corte de niña
+              <span class="badge custom-bg-pink rounded-pill">$ 15.900</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Corte de mujer (cabello largo)
+              <span class="badge custom-bg-pink rounded-pill">$ 25.900</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Terapia intensiva Kerastase
+              <span class="badge custom-bg-pink rounded-pill">$ 59.900</span>
+            </li>
+          </ul>
+
+          <hr />
+          <div class="d-flex justify-content-between">
+            <div>Total</div>
+            <div class="custom-text-pink fw-bold">$ 101.700</div>
+          </div>
+        </div>
+
+        <button routerLink="/reservation" class="m-3 btn custom-btn-pink">Ir a pagar</button>
+
+      </div>
     </div>
   </div>
 </section>
