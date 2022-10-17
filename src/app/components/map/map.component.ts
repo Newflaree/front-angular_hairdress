@@ -1,5 +1,5 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-import { Map } from 'mapbox-gl';
+import { Map, Marker } from 'mapbox-gl';
 
 @Component({
   selector: 'app-map',
@@ -19,5 +19,6 @@ export class MapComponent implements AfterViewInit {
       center: [-70.4087393, -23.6710097], // starting position [lng, lat]
       zoom: 14, // starting zoom
     });
+
   }
 }
