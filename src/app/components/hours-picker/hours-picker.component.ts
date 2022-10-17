@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-hours-picker',
   templateUrl: './hours-picker.component.html',
-  styleUrls: ['./hours-picker.component.css']
+  styleUrls: []
 })
 export class HoursPickerComponent implements OnInit {
   public freeHours1 = [
