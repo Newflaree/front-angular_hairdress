@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-pages',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagesComponent implements OnInit {
 
-  constructor() { }
+  constructor() {  }
+
 
   ngOnInit(): void {
   }
 
+  onActivate( event: any ) {
+    window.scrollTo( 0, 0 )
+  }
 }

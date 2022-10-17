@@ -58,7 +58,7 @@ const routes: Routes = [
     RouterModule
   ],
   imports: [
-    RouterModule.forChild( routes )
+    RouterModule.forRoot( routes, { scrollPositionRestoration: 'enabled' } )
   ]
 })
 export class PagesRoutingModule { }

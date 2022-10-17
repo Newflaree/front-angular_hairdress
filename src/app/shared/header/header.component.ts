@@ -30,7 +30,8 @@ export class HeaderComponent implements OnInit {
   ]
 
 
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit(): void {
   }
