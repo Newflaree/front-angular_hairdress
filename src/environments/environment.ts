@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  mapboxKey: 'pk.eyJ1IjoibmV3ZmxhcmUiLCJhIjoiY2w4d2ozam41MGNyMjNvcnNxb2Jic2g2NCJ9.qV5h6WL3jU0lcdRIxUvR0A'
+  mapboxKey: 'pk.eyJ1IjoibmV3ZmxhcmUiLCJhIjoiY2w4d2ozam41MGNyMjNvcnNxb2Jic2g2NCJ9.qV5h6WL3jU0lcdRIxUvR0A',
+  base_url: 'http://localhost:3001/api'
 };
 
 /*

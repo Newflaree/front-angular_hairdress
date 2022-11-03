@@ -12,7 +12,6 @@ SwiperCore.use([ Autoplay, EffectFade, Navigation, Pagination ]);
 
 export class SlideShowComponent implements OnInit {
   public slideItems = [
-    { title: 'Slide Title 1', p: 'jaksdfj jj k kjasd jk j askd jfkjsldfkajsf', url: 'assets/images/banner.jpg' },
     { title: 'Slide Title 2', p: 'jaksdfj jj k kjasd jk j askd jfkjsldfkajsf', url: 'https://swiperjs.com/demos/images/nature-1.jpg' },
     { title: 'Slide Title 3', p: 'jaksdfj jj k kjasd jk j askd jfkjsldfkajsf', url: 'https://swiperjs.com/demos/images/nature-2.jpg' },
     { title: 'Slide Title 4', p: 'jaksdfj jj k kjasd jk j askd jfkjsldfkajsf', url: 'https://swiperjs.com/demos/images/nature-3.jpg' },

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 // Components
@@ -25,6 +26,7 @@ import { ReservationComponent } from './reservation/reservation.component';
   imports: [
     CommonModule,
     ComponentsModule,
+    HttpClientModule,
     RouterModule,
     SharedModule
   ]

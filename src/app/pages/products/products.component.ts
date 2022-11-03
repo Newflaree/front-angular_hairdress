@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+// Services
+import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
   selector: 'app-products',
@@ -6,18 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: []
 })
 export class ProductsComponent implements OnInit {
-  public productsTest = [
-    { name: 'test 1' },
-    { name: 'test 2' },
-    { name: 'test 3' },
-    { name: 'test 4' },
-    { name: 'test 5' },
-    { name: 'test 6' },
-  ]
+  public from: number = 0;
+  public products: any[] = [];
+  public isLoading: boolean = true;
 
-  constructor() { }
+  constructor(
+    private productService: ProductsService
+  ) { }
 
   ngOnInit(): void {
+    this.loadProducts();
   }
 
+  loadProducts() {
+    this.productService.loadProducts( this.from )
+      .subscribe( ({ products }) => {
+        this.products = products || [];
+        this.isLoading = false;
+      });
+  }
 }

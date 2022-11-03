@@ -1,3 +1,4 @@
+
 <section class="py-5 p-3 animate__animated animate__fadeIn animate__faster">
   <div class="row">
     <app-title></app-title>
@@ -5,11 +6,33 @@
 
   <hr />
 
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    <!-- Product Card -->
-    <div class="col" *ngFor="let item of productsTest">
-      <app-product-card [cardTitle]='item.name'></app-product-card>
+  <!--TODO: Replace h1 to loader component-->
+  <div *ngIf="isLoading" class="text-center p-5 m-5 w ">
+    <div class="spinner-border custom-text-pink" role="status">
+      <span class="visually-hidden">Loading...</span>
     </div>
-    <!-- Product Card -->
+  </div>
+
+  <div *ngIf="!isLoading" class="animate__animated animate__fadeIn animate__faster">
+    <div>
+      <p class="text center m-5 py-5" *ngIf="products.length === 0">
+         No hay productos disponibles
+      </p>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4" *ngIf="products.length > 0">
+      <!-- Product Card -->
+      <div class="col" *ngFor="let item of products">
+        <app-product-card 
+          [cardTitle]='item.name'
+          [cardImg]='item.img'
+          [cardDesc]='item.desc'
+          [cardStock]='item.stock'
+          [cardPrice]='item.price'
+        >
+        </app-product-card>
+      </div>
+      <!-- Product Card -->
+    </div>
   </div>
 </section>
