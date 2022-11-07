@@ -10,28 +10,50 @@
       aria-controls="home-tab-pane"
       aria-selected="true"
     >
-      {{ aboutInfo[0].name }}
+      Visión
     </button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link custom-text-pink" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">{{ aboutInfo[1].name }}</button>
+    <button 
+      class="nav-link custom-text-pink"
+      id="profile-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#profile-tab-pane"
+      type="button"
+      role="tab"
+      aria-controls="profile-tab-pane"
+      aria-selected="false"
+    >
+      Misión
+    </button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link custom-text-pink" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">{{ aboutInfo[2].name }}</button>
+    <button
+      class="nav-link custom-text-pink"
+      id="contact-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#contact-tab-pane"
+      type="button"
+      role="tab"
+      aria-controls="contact-tab-pane"
+      aria-selected="false"
+    >
+      Sobre Mi
+    </button>
   </li>
 </ul>
 
 <div class="tab-content py-5" id="myTabContent">
   <div class="tab-pane fade show active p-3" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-    <!-- About -->
-    {{ aboutInfo[0].contentText }}
+    <!-- Vision -->
+    {{ aboutInfo?.vision }}
   </div>
   <div class="tab-pane fade p-3" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
     <!-- Mission -->
-    {{ aboutInfo[1].contentText }}
+    {{ aboutInfo?.mission }}
   </div>
   <div class="tab-pane fade p-3" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
     <!-- About -->
-    {{ aboutInfo[2].contentText }}
+    {{ aboutInfo?.about }}
   </div>
 </div>

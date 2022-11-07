@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+// Services
+import { HomeInfoService } from 'src/app/services/home-info.service';
 
 @Component({
   selector: 'app-home-about',
@@ -7,27 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeAboutComponent implements OnInit {
   public aboutInfo: any;
+  public isLoading: boolean = true;
 
-  constructor() { }
+  constructor(
+    private homeInfoService: HomeInfoService
+  ) { }
 
   ngOnInit(): void {
-    this.setAboutInfo();
+    this.loadAboutInfo();
   }
 
-  setAboutInfo() {
-    this.aboutInfo = [
-      { 
-        name: 'Misión',
-        contentText: '[MISSION Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus molestie venenatis augue vel venenatis. Donec ornare nibh non arcu ornare aliquam. Nam posuere tortor ut magna mollis, sit amet tempus nisi lobortis. Aenean commodo magna porttitor, cursus arcu at, vehicula arcu. Mauris non condimentum tellus,'
-      },
-      { 
-        name: 'Visión',
-        contentText: '[VISION] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus molestie venenatis augue vel venenatis. Donec ornare nibh non arcu ornare aliquam. Nam posuere tortor ut magna mollis, sit amet tempus nisi lobortis. Aenean commodo magna porttitor, cursus arcu at, vehicula arcu. Mauris non condimentum tellus,'
-      },
-      { 
-        name: 'Sobre mi',
-        contentText: '[ABOUT] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus molestie venenatis augue vel venenatis. Donec ornare nibh non arcu ornare aliquam. Nam posuere tortor ut magna mollis, sit amet tempus nisi lobortis. Aenean commodo magna porttitor, cursus arcu at, vehicula arcu. Mauris non condimentum tellus,'
-      }
-    ];
+  loadAboutInfo() {
+    this.homeInfoService.loadHomeInfo()
+    .subscribe( ({ currentHomeInfo }) => {
+      this.aboutInfo = currentHomeInfo[0]
+    });
   }
 }
