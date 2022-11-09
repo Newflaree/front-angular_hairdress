@@ -1,8 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
 :root {
   --main-color: #E0698D;
   --main-color-darker: #A85B6D;
   --main-dark: #0D3A5C;
   --main-light: #DAEAF5;
+  --cursive-font: 'Dancing Script', cursive;
+}
+
+.custom-brand-letter {
+  color: var( --main-color );
+  font-family: var( --cursive-font );
+  text-transform: capitalize;
 }
 
 .custom-text-pink {
@@ -51,4 +60,6 @@
   color: white;
 }
 
-
+.cursor-pointer {
+  cursor: pointer;
+}
