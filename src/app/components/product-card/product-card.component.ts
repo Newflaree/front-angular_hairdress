@@ -9,6 +9,8 @@ export class ProductCardComponent implements OnInit {
   @Input() cardTitle: string = 'Hola';
   @Input() cardImg: string = 'Hola';
   @Input() cardDesc: string = 'Hola';
+  @Input() cardCat: string = 'Hola';
+  @Input() cardBrand: string = 'Hola';
   @Input() cardStock: number = 0;
   @Input() cardPrice: string = 'Hola';
 

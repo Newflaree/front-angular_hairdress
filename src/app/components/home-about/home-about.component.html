@@ -46,14 +46,17 @@
 <div class="tab-content py-5" id="myTabContent">
   <div class="tab-pane fade show active p-3" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
     <!-- Vision -->
+    <p class="text-center p-3" *ngIf="!aboutInfo?.vision">No se ha configurado la visión aún</p>
     {{ aboutInfo?.vision }}
   </div>
   <div class="tab-pane fade p-3" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
     <!-- Mission -->
+    <p class="text-center p-3" *ngIf="!aboutInfo?.mission">No se ha configurado la misión aún</p>
     {{ aboutInfo?.mission }}
   </div>
   <div class="tab-pane fade p-3" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
     <!-- About -->
+    <p class="text-center p-3" *ngIf="!aboutInfo?.about">No se ha configurado el apartado sobre mi aún</p>
     {{ aboutInfo?.about }}
   </div>
 </div>

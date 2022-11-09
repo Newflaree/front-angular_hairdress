@@ -9,22 +9,21 @@ const base_url = environment.base_url;
 @Injectable({
   providedIn: 'root'
 })
-export class ProductsService {
+export class HomeProductsService {
 
   constructor(
     private http: HttpClient
   ) { }
 
-  loadProducts( from: number = 0, limit: number = 6 ) {
+  loadHomeProducts() {
     return this.http.get(
-      `${ base_url }/products?from=${ from }&limit=${ limit }`
+      `${ base_url }/home-products`
     )
     .pipe(
-      map( (resp: { ok?: boolean | false, total?: number | 0, products?: any[] | [] }) => {
+      map( (resp: any) => {
         return {
           ok: resp.ok,
-          total: resp.total,
-          products: resp.products
+          currentHomeProducts: resp.homeProducts
         }
       })
     )

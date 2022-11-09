@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import SwiperCore, { Pagination, Navigation } from "swiper";
 
+// Services
+import { HomeProductsService } from 'src/app/services/home-products.service';
+
 SwiperCore.use([Pagination, Navigation]);
 
 @Component({
@@ -9,21 +12,16 @@ SwiperCore.use([Pagination, Navigation]);
   styleUrls: ['./home-products.component.css']
 })
 export class HomeProductsComponent implements OnInit {
-  public productsTest = [
-    { name: 'test 1' },
-    { name: 'test 2' },
-    { name: 'test 3' },
-    { name: 'test 4' },
-    { name: 'test 5' },
-    { name: 'test 6' },
-    { name: 'test 7' },
-    { name: 'test 8' },
-    { name: 'test 9' },
-  ]
+  public homeProducts: any;
 
-  constructor() { }
+  constructor(
+    private homeProductsService: HomeProductsService
+  ) { }
 
   ngOnInit(): void {
+    this.homeProductsService.loadHomeProducts()
+      .subscribe( ({currentHomeProducts}) => {
+        this.homeProducts = currentHomeProducts;
+    })
   }
-
 }

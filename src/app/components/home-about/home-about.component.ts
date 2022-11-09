@@ -22,7 +22,7 @@ export class HomeAboutComponent implements OnInit {
   loadAboutInfo() {
     this.homeInfoService.loadHomeInfo()
     .subscribe( ({ currentHomeInfo }) => {
-      this.aboutInfo = currentHomeInfo[0]
+      this.aboutInfo = currentHomeInfo[0];
     });
   }
 }

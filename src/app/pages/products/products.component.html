@@ -15,7 +15,7 @@
 
   <div *ngIf="!isLoading" class="animate__animated animate__fadeIn animate__faster">
     <div>
-      <p class="text center m-5 py-5" *ngIf="products.length === 0">
+      <p class="text-center m-5 py-5" *ngIf="products.length === 0">
          No hay productos disponibles
       </p>
     </div>
@@ -25,6 +25,7 @@
       <div class="col" *ngFor="let item of products">
         <app-product-card 
           [cardTitle]='item.name'
+          [cardBrand]='item.brand.name'
           [cardImg]='item.img'
           [cardDesc]='item.desc'
           [cardStock]='item.stock'
