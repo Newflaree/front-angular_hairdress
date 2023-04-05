@@ -63,3 +63,7 @@
 .cursor-pointer {
   cursor: pointer;
 }
+
+.custom-input:focus {
+  border-color: var( --main-color );
+}

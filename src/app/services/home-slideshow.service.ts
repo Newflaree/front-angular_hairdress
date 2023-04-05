@@ -6,27 +6,27 @@ import { environment } from 'src/environments/environment';
 
 const base_url = environment.base_url;
 
+
 @Injectable({
   providedIn: 'root'
 })
-export class HomeProductsService {
+export class HomeSlideshowService {
 
   constructor(
     private http: HttpClient
   ) { }
 
-  loadHomeProducts() {
+  loadHomeSlideshow() {
     return this.http.get(
-      `${ base_url }/home-products`
+      `${ base_url }/home-slide`
     )
     .pipe(
       map( (resp: any) => {
-        console.log( resp );
         return {
           ok: resp.ok,
-          currentHomeProducts: resp.homeProducts
+          homeSlides: resp.homeSlides
         }
-      })
-    )
+      }) 
+    );
   }
 }

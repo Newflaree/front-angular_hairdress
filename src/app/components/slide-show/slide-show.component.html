@@ -13,13 +13,14 @@
   [navigation]="true"
   class="mySwiper rounded"               
 >
-  <ng-template swiperSlide *ngFor="let itemsss of slideItems">
-    <div style="background-image: url('{{ itemsss.url }}');" class="slide-item">
+  <ng-template swiperSlide *ngFor="let slideItem of slideItems">
+    <div style="background-image: url('{{ slideItem.img }}');" class="slide-item">
       <div class='item-description p-4 text-start'>
-        <h3>{{ itemsss.title }}</h3>
+        <h3>{{ slideItem.title }}</h3>
         <p>
-          {{ itemsss.p | slice:0:230 }}...
+          {{ slideItem.desc | slice:0:75 }}...
         </p>
+        <!-- TODO: Set URL on Btn -->
         <button class="btn custom-btn-pink">Reservar Hora</button>
       </div> 
     </div>
